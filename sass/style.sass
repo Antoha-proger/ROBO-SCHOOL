@@ -12,10 +12,13 @@ $red-color: #D52027
 
 body
     font-family: Jost
+
+body.body_active
     overflow: hidden
+    padding-right: 15px
     
 .container
-    max-width: 1200px
+    max-width: 1160px
     margin: 0 auto
 
 .logo
@@ -84,6 +87,19 @@ body
     &_active
         background-image: url("../icons/hamburger-menu-close-icon.svg")
 
+.button
+    font-size: 18px
+    color: #fff
+    background-color: $red-color
+    padding: 25px 54px
+    border: 3px solid $red-color
+    cursor: pointer
+    transition: color 0.6s, background-color 0.6s
+    border-radius: 5px
+    &:hover
+        color: $red-color
+        background-color: #fff
+        border: 3px solid $red-color
 
 .header
     background-color: $dark-blue-color
@@ -94,42 +110,56 @@ body
         display: flex
         justify-content: space-between
         align-items: center
-        
 
+.hero
+    background-color: $dark-blue-color
+    min-height: 666px
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 40px 15px 0px
+    &__title
+        font-size: 50px
+        color: #fff
+        font-weight: 600
+        margin-bottom: 20px
+    &__text
+        font-size: 20px
+        color: #fff
+        margin-bottom: 50px
+    
+        
 @media (max-width: 1024px)
     // Контейнер
     .container
         max-width: 100%
-
     .header
         &__nav
             display: none
             &_active
-                position: absolute
+                position: fixed
                 top: 0
+                overflow-y: hidden
                 left: 0
                 animation: menu_anim 0.5s
                 display: block
                 background-color: $dark-blue-color
-                width: 100%
-                height: 100%
+                min-width: 100vw
+                min-height: 100vh
                 z-index: 2      
-                     
-                
         &__tel
             display: none
         &__menu
-            width: 100%
-            height: 100%
-
+            min-width: 100vw
+            min-height: 100vh
         &__menu-list
-            width: 100%
-            height: 100%
+            min-width: 100vw
+            min-height: 100vh
             flex-direction: column
             justify-content: center
             align-items: center
             row-gap: 40px
-
         &__menu-item
             font-size: 30px
 
@@ -141,10 +171,23 @@ body
             100%
                 transform: translateX(0%)
 
-        
-
     .mobile-nav
         visibility: visible
 
-                
-    
+    .hero
+        &__container
+            flex-direction: column
+            position: relative
+        &__left-part
+            text-align: center
+        &__right-part
+            position: relative
+            bottom: 20px
+        &__button
+            width: 90%
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 10px
+            z-index: 10
+            

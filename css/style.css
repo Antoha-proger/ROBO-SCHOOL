@@ -7,11 +7,15 @@
 
 body {
   font-family: Jost;
+}
+
+body.body_active {
   overflow: hidden;
+  padding-right: 15px;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
@@ -95,6 +99,22 @@ body {
   background-image: url("../icons/hamburger-menu-close-icon.svg");
 }
 
+.button {
+  font-size: 18px;
+  color: #fff;
+  background-color: #D52027;
+  padding: 25px 54px;
+  border: 3px solid #D52027;
+  cursor: pointer;
+  transition: color 0.6s, background-color 0.6s;
+  border-radius: 5px;
+}
+.button:hover {
+  color: #D52027;
+  background-color: #fff;
+  border: 3px solid #D52027;
+}
+
 .header {
   background-color: #141024;
   color: #FFFFFF;
@@ -107,6 +127,28 @@ body {
   align-items: center;
 }
 
+.hero {
+  background-color: #141024;
+  min-height: 666px;
+}
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 15px 0px;
+}
+.hero__title {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero__text {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
 @media (max-width: 1024px) {
   .container {
     max-width: 100%;
@@ -115,26 +157,27 @@ body {
     display: none;
   }
   .header__nav_active {
-    position: absolute;
+    position: fixed;
     top: 0;
+    overflow-y: hidden;
     left: 0;
     animation: menu_anim 0.5s;
     display: block;
     background-color: #141024;
-    width: 100%;
-    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     z-index: 2;
   }
   .header__tel {
     display: none;
   }
   .header__menu {
-    width: 100%;
-    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
   }
   .header__menu-list {
-    width: 100%;
-    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -156,5 +199,24 @@ body {
   }
   .mobile-nav {
     visibility: visible;
+  }
+  .hero__container {
+    flex-direction: column;
+    position: relative;
+  }
+  .hero__left-part {
+    text-align: center;
+  }
+  .hero__right-part {
+    position: relative;
+    bottom: 20px;
+  }
+  .hero__button {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: 10;
   }
 }/*# sourceMappingURL=style.css.map */
