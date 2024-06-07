@@ -11,30 +11,38 @@
     <main class="main">
         <!-- Шапка -->
         <header class="header main__header">
-            <!-- Навигация -->
-            <nav class="header__nav">
-                <!-- Контейнер -->
-                <div class="container header__container">
-                    <!-- Логотип -->
-                    <div class="logo-block header__logo-block">
-                        <h1 class="logo header__logo">ROBO.SCHOOL</h1>
-                    </div>
+            <!-- Контейнер -->
+            <div class="container header__container">
+                <!-- Логотип -->
+                <div class="logo-block header__logo-block">
+                    <h1 class="logo header__logo">ROBO.SCHOOL</h1>
+                </div>
 
+                <!-- Навигация -->
+                <nav class="header__nav">
                     <!-- Меню -->
-                    <div class="menu-block header__menu-block">
-                        <ul class="menu header__menu">
-                            <li class="menu-item header__menu-item">О школе</li>
-                            <li class="menu-item header__menu-item">Тренеры</li>
-                            <li class="menu-item header__menu-item">Стоимость</li>
+                    <div class="menu-block header__menu">
+                        <ul class="menu-list header__menu-list">
+                            <a  class="menu-item header__menu-item link" href="#"><li>О школе</li></a>
+                            <a  class="menu-item header__menu-item link" href="#"><li>Тренеры</li></a>
+                            <a  class="menu-item header__menu-item link" href="#"><li>Стоимость</li></a>
                         </ul>
                     </div>
+                </nav>
 
-                    <!-- Телефон -->
-                     <div class="tel-block header__tel-block">
-                        <a class="tel header-tel" href="tel:+78000001122">+7 800 000 11 22</a>
-                     </div>
+                <!-- Телефон -->
+                <div class="tel-block header__tel-block">
+                    <a class="tel header__tel link" href="tel:+78000001122">+7 800 000 11 22</a>
                 </div>
-            </nav>
+
+                <div class="mobile-nav">
+                    <div class="tel-block-mobile">
+                        <a class="tel-mobile" href="tel:+78000001122"></a>
+                    </div>
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            
         </header>
     </main>
 </body>
