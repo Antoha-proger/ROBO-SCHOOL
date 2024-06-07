@@ -12,6 +12,7 @@ $red-color: #D52027
 
 body
     font-family: Jost
+    overflow: hidden
     
 .container
     max-width: 1200px
@@ -62,6 +63,27 @@ body
     &:hover::before, &:hover:after
         width: 100%
 
+.mobile-nav
+    position: absolute
+    top: 30px
+    right: 30px
+    display: flex
+    column-gap: 15px
+    visibility: hidden
+
+.tel-mobile
+    cursor: pointer
+    z-index: 1
+
+.hamburger-menu
+    background-image: url("../icons/hamburger-menu-icon.svg")
+    height: 44px
+    width: 44px
+    cursor: pointer
+    z-index: 2
+    &_active
+        background-image: url("../icons/hamburger-menu-close-icon.svg")
+
 
 .header
     background-color: $dark-blue-color
@@ -82,21 +104,47 @@ body
     .header
         &__nav
             display: none
+            &_active
+                position: absolute
+                top: 0
+                left: 0
+                animation: menu_anim 0.5s
+                display: block
+                background-color: $dark-blue-color
+                width: 100%
+                height: 100%
+                z-index: 2      
+                     
+                
         &__tel
             display: none
+        &__menu
+            width: 100%
+            height: 100%
+
+        &__menu-list
+            width: 100%
+            height: 100%
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            row-gap: 40px
+
+        &__menu-item
+            font-size: 30px
+
+        @keyframes menu_anim
+            0%
+                transform: translateX(10000000%)
+            50%
+                transform: translateX(50%)
+            100%
+                transform: translateX(0%)
+
+        
 
     .mobile-nav
-        display: flex
-        column-gap: 15px
+        visibility: visible
 
-    .tel-block-mobile
-        background-image: url("../icons/telephone-icon.svg")
-        height: 44px
-        width: 44px
-        cursor: pointer
-
-    .hamburger-menu
-        background-image: url("../icons/hamburger-menu-icon.svg")
-        height: 44px
-        width: 44px
-        cursor: pointer
+                
+    
