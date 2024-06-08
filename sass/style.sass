@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap')
+@import "../node_modules/swiper/swiper-bundle.min.css"
+
 
 $dark-blue-color: #141024
 $red-color: #D52027
@@ -144,6 +146,11 @@ body.body_active
     &:hover::after
         display: block
 
+.more
+    text-decoration: none
+    color: #D52027
+    font-size: 18px
+
 .header
     background-color: $dark-blue-color
     color: #FFFFFF
@@ -214,7 +221,48 @@ body.body_active
         &:last-child h4
             display: inline-block
         
-            
+.trainer
+    min-height: 800px
+    &__container
+        padding: 100px 20px 
+    &__title
+        margin-bottom: 60px
+    &__swiper-slide
+        img
+            margin-bottom: 20px
+    &__subtitle
+        margin-bottom: 10px
+    &__text
+        margin-bottom: 20px
+    &__swiper-slide
+        max-width: 360px
+    &__swiper-wrapper
+        margin-bottom: 100px
+    &__slider-nav
+        display: flex
+        column-gap: 10px
+        justify-content: end
+    &__swiper-button-prev, &__swiper-button-next
+        position: static
+    &__swiper-button-prev
+        background-image: url("../icons/Right.svg")
+        width: 40px
+        height: 40px
+        &::after
+            content: none
+    &__swiper-button-next
+        background-image: url("../icons/Left.svg")
+        width: 40px
+        height: 40px
+        &::after
+            content: none
+
+    &__swiper-scrollbar
+        max-width: 360px
+        background-color: #141024 0.8
+        // transparent: 0.8
+.swiper-scrollbar-drag
+    background-color: #141024
         
 @media (max-width: 1124px)
     // Контейнер

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import "../node_modules/swiper/swiper-bundle.min.css";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -165,6 +166,12 @@ body.body_active {
   display: block;
 }
 
+.more {
+  text-decoration: none;
+  color: #D52027;
+  font-size: 18px;
+}
+
 .header {
   background-color: #141024;
   color: #FFFFFF;
@@ -255,6 +262,64 @@ body.body_active {
 }
 .benefits__merit:last-child h4 {
   display: inline-block;
+}
+
+.trainer {
+  min-height: 800px;
+}
+.trainer__container {
+  padding: 100px 20px;
+}
+.trainer__title {
+  margin-bottom: 60px;
+}
+.trainer__swiper-slide img {
+  margin-bottom: 20px;
+}
+.trainer__subtitle {
+  margin-bottom: 10px;
+}
+.trainer__text {
+  margin-bottom: 20px;
+}
+.trainer__swiper-slide {
+  max-width: 360px;
+}
+.trainer__swiper-wrapper {
+  margin-bottom: 100px;
+}
+.trainer__slider-nav {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: end;
+}
+.trainer__swiper-button-prev, .trainer__swiper-button-next {
+  position: static;
+}
+.trainer__swiper-button-prev {
+  background-image: url("../icons/Right.svg");
+  width: 40px;
+  height: 40px;
+}
+.trainer__swiper-button-prev::after {
+  content: none;
+}
+.trainer__swiper-button-next {
+  background-image: url("../icons/Left.svg");
+  width: 40px;
+  height: 40px;
+}
+.trainer__swiper-button-next::after {
+  content: none;
+}
+.trainer__swiper-scrollbar {
+  max-width: 360px;
+  background-color: #141024 0.8;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #141024;
 }
 
 @media (max-width: 1124px) {
