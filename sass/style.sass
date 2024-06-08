@@ -9,6 +9,8 @@ $red-color: #D52027
     box-sizing: border-box
     padding: 0
     margin: 0
+html
+    scroll-behavior: smooth
 
 body
     font-family: Jost
@@ -101,6 +103,14 @@ body.body_active
         background-color: #fff
         border: 3px solid $red-color
 
+.title
+    font-size: 50px
+    font-weight: 600
+
+.subtitle
+    font-size: 24px
+    font-weight: 600
+
 .text
     font-size: 18px
     color: rgba(20, 16, 36, 0.7)
@@ -111,6 +121,28 @@ body.body_active
         font-size: 70px
         font-weight: 600
         margin-bottom: 20px
+
+.tooltip
+    position: relative
+    cursor: pointer
+    &::after
+        content: attr(data-tooltip)
+        display: none
+        position: absolute
+        // top: -20
+        bottom: 40px
+        left: 15px
+        z-index: 100
+        background-color: #fff
+        color: #141024
+        white-space: nowrap
+        border-radius: 5px
+        padding: 15px
+        box-shadow: 0px 2px 8px 5px rgba(0,0,0,0.4)
+        -webkit-box-shadow: 0px 2px 8px 5px rgba(0,0,0,0.4)
+        -moz-box-shadow: 0px 2px 8px 5px rgba(0,0,0,0.4)
+    &:hover::after
+        display: block
 
 .header
     background-color: $dark-blue-color
@@ -156,15 +188,35 @@ body.body_active
     &__bottom-part
         display: flex    
         justify-content: space-between
-        column-gap: 30px
+        column-gap: 40px
         flex-shrink: 5
         flex-wrap: wrap
     &__text
         max-width: 260px
     &__card
         margin-bottom: 60px
+
+.benefits
+    background-color: #F9F9F9
+    min-height: 500px
+    &__container
+        padding: 100px 20px 
+    &__title
+        margin-bottom: 80px
+    &__subtitle
+        margin-bottom: 20px
+    &__text
+        max-width: 360px
+    &__merit
+        display: flex
+        justify-content: space-between
+        column-gap: 40px
+        &:last-child h4
+            display: inline-block
         
-@media (max-width: 1024px)
+            
+        
+@media (max-width: 1124px)
     // Контейнер
     .container
         max-width: 100%
@@ -224,4 +276,14 @@ body.body_active
             transform: translateX(-50%)
             bottom: 10px
             z-index: 10
+
+    .benefits
+        text-align: center
+        &__merit
+            flex-direction: column
+            align-items: center
+            text-align: center
+            row-gap: 40px
+        &__tooltip::after
+            left: -170px
             
