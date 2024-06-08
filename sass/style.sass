@@ -101,6 +101,17 @@ body.body_active
         background-color: #fff
         border: 3px solid $red-color
 
+.text
+    font-size: 18px
+    color: rgba(20, 16, 36, 0.7)
+
+.card
+    &-title
+        color: $red-color
+        font-size: 70px
+        font-weight: 600
+        margin-bottom: 20px
+
 .header
     background-color: $dark-blue-color
     color: #FFFFFF
@@ -119,6 +130,10 @@ body.body_active
         justify-content: space-between
         align-items: center
         padding: 40px 15px 0px
+    &__right-part
+        img
+            width: clamp(273px, 55.176vw, 565px)
+            height: clamp(320px, 101.846vh, 662px)
     &__title
         font-size: 50px
         color: #fff
@@ -128,7 +143,26 @@ body.body_active
         font-size: 20px
         color: #fff
         margin-bottom: 50px
-    
+
+.school
+    min-height: 650px
+    &__container
+        padding: 120px 20px 0
+    &__main-text
+        max-width: 800px
+        font-size: 30px
+    &__top-part
+        margin-bottom: 100px
+    &__bottom-part
+        display: flex    
+        justify-content: space-between
+        column-gap: 30px
+        flex-shrink: 5
+        flex-wrap: wrap
+    &__text
+        max-width: 260px
+    &__card
+        margin-bottom: 60px
         
 @media (max-width: 1024px)
     // Контейнер

@@ -115,6 +115,18 @@ body.body_active {
   border: 3px solid #D52027;
 }
 
+.text {
+  font-size: 18px;
+  color: rgba(20, 16, 36, 0.7);
+}
+
+.card-title {
+  color: #D52027;
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
 .header {
   background-color: #141024;
   color: #FFFFFF;
@@ -137,6 +149,10 @@ body.body_active {
   align-items: center;
   padding: 40px 15px 0px;
 }
+.hero__right-part img {
+  width: clamp(273px, 55.176vw, 565px);
+  height: clamp(320px, 101.846vh, 662px);
+}
 .hero__title {
   font-size: 50px;
   color: #fff;
@@ -147,6 +163,34 @@ body.body_active {
   font-size: 20px;
   color: #fff;
   margin-bottom: 50px;
+}
+
+.school {
+  min-height: 650px;
+}
+.school__container {
+  padding: 120px 20px 0;
+}
+.school__main-text {
+  max-width: 800px;
+  font-size: 30px;
+}
+.school__top-part {
+  margin-bottom: 100px;
+}
+.school__bottom-part {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  flex-shrink: 5;
+  flex-wrap: wrap;
+}
+.school__text {
+  max-width: 260px;
+}
+.school__card {
+  margin-bottom: 60px;
 }
 
 @media (max-width: 1024px) {
