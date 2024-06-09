@@ -32,15 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Модальное окно
-    const button = document.querySelectorAll('.more')[0];
+    // const button = document.querySelectorAll('.more');
     const modal_back = document.querySelector('.modal-back');
     const modal_btn_close = document.querySelector('.trainer__button-close');
     const gains_list = document.querySelectorAll('.trainer__btn-check');
     const modal_descr = document.querySelector('.trainer__modal-descr');
 
-    button.addEventListener('click', () => {
-        modal_back.style.visibility = 'visible';
-    });
+    // button.addEventListener('click', () => {
+    //     modal_back.style.visibility = 'visible';
+    // });
 
     modal_btn_close.addEventListener('click', () => {
         modal_back.style.visibility = 'hidden';
@@ -67,27 +67,67 @@ window.addEventListener('DOMContentLoaded', () => {
         <p class="trainer__edu">Также как экономическая повестка сегодняшнего дня позволяет выполнить важные задания по разработке новых принципов формирования материально-технической и кадровой базы. Учитывая ключевые сценарии поведения, синтетическое тестирование выявляет срочную потребность системы обучения кадров, соответствующей насущным потребностям.</p>`,
     };
 
-    // gains_list.forEach((item) => {
-    //     item.addEventListener('change', function (event) {
-    //         // if (event.checked) {
-    //         //     alert(this.value)
-    //             // let item_index = gains_list.indexOf(this);
-    //             // alert(item_index)
-    //             // modal_descr.innerHTML = content[item_index];
-    //         // };
-    //         alert(event.chacked)
-    //     })
-        
-    // });
-
     for (let radio of gains_list) {
-        radio.addEventListener('change', function (event) {
+        radio.addEventListener('change', function () {
             if (this.checked) {
                 let item_id = this.id;
                 let label_text = document.querySelector(`label[for=${item_id}]`).textContent;
                 modal_descr.innerHTML = content[label_text];
-            }
-        })
+            };
+        });
     }
+
+    // Имена тренеров
+    const trainer_names = document.querySelectorAll('.trainer__subtitle');
+    const more_buttons = document.querySelectorAll('.trainer__more');
+    const selected_trainer = document.querySelector('.trainer__train-name');
+    const trainer_job = document.querySelector('.trainer__train-job');
+    const trainer_image = document.querySelector('.train-img');
+
+    const trainers = {
+        more_btn1: {
+            name: 'Ирина Лайм',
+            job: 'преподаватель по робототехнике',
+            img: '../img/img1.jpg',
+        },
+
+        more_btn2: {
+            name: 'Марина Орлова',
+            job: 'преподаватель по робототехнике',
+            img: '../img/img2.jpg',
+        },
+
+        more_btn3: {
+            name: 'Максим Петров',
+            job: 'преподаватель по программированию',
+            img: '../img/img3.jpg',
+        },
+
+        more_btn4: {
+            name: 'Константин Назаров',
+            job: 'преподаватель по робототехнике',
+            img: '../img/img4.jpg',
+        },
+
+        more_btn5: {
+            name: 'Лиза Весенняя',
+            job: 'преподаватель по программированию',
+            img: '../img/img5.jpg',
+        },
+
+    };
+
+    more_buttons.forEach((button) => {
+        button.addEventListener('click', (btn) => {
+            modal_back.style.visibility = 'visible';
+            let button_id = btn.target.id;
+            let trainer_info = trainers[button_id];
+            
+            selected_trainer.textContent = trainer_info['name'];
+            trainer_job.textContent = trainer_info['job'];
+            trainer_image.src = trainer_info['img'];
+        });
+    })
+
 
 })
