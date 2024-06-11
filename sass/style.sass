@@ -283,6 +283,7 @@ body.body_active
         
 .trainer
     min-height: 800px
+    margin-bottom: 120px
     &__container
         padding: 100px 20px 
     &__title
@@ -373,6 +374,59 @@ body.body_active
         line-height: 160%
         color: #000
 
+.packages
+    min-height: 650px
+
+    &__title
+        margin-bottom: 60px
+
+    &__package-list
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+
+    &__package-list-item
+        height: 460px
+        border: 1px solid rgba(20, 16, 36, 0.2)
+        width: 360px
+        max-width: 360px
+        border-radius: 20px
+        transition: all 0.3s
+        &:hover
+            background-color: $dark-blue-color
+            color: #fff
+            height: 500px
+            margin: -1rem 0
+        &:hover .text
+            color: #fff
+        &:hover .packages__package-card-title
+            margin-bottom: 2rem
+        &:hover .packages__button
+            margin-top: 1rem
+        
+    &__package-card
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        width: 100%
+        height: 100%
+
+    &__package-card-title
+        font-size: 30px
+        font-weight: 600
+
+    &__package-card-price
+        text-align: center
+        margin-bottom: 20px
+
+    &__package-card-descr
+        text-align: center
+
+    &__button
+        &:hover
+            background-color: $red-color
+            color: #fff
 
         
 @media (max-width: 1124px)

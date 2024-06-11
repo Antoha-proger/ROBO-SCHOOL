@@ -331,6 +331,7 @@ body.body_active {
 
 .trainer {
   min-height: 800px;
+  margin-bottom: 120px;
 }
 .trainer__container {
   padding: 100px 20px;
@@ -435,6 +436,64 @@ body.body_active {
   font-size: 20px;
   line-height: 160%;
   color: #000;
+}
+
+.packages {
+  min-height: 650px;
+}
+.packages__title {
+  margin-bottom: 60px;
+}
+.packages__package-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.packages__package-list-item {
+  height: 460px;
+  border: 1px solid rgba(20, 16, 36, 0.2);
+  width: 360px;
+  max-width: 360px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.packages__package-list-item:hover {
+  background-color: #141024;
+  color: #fff;
+  height: 500px;
+  margin: -1rem 0;
+}
+.packages__package-list-item:hover .text {
+  color: #fff;
+}
+.packages__package-list-item:hover .packages__package-card-title {
+  margin-bottom: 2rem;
+}
+.packages__package-list-item:hover .packages__button {
+  margin-top: 1rem;
+}
+.packages__package-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.packages__package-card-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.packages__package-card-price {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.packages__package-card-descr {
+  text-align: center;
+}
+.packages__button:hover {
+  background-color: #D52027;
+  color: #fff;
 }
 
 @media (max-width: 1124px) {
